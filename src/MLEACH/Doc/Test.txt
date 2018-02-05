@@ -1,0 +1,7 @@
+temp_rand = dblrand(); //Generate a random variable 0 to 1
+
+//                EV << "Testing--Start" << endl;
+//                EV << "Output-01: " << temp_rand << endl;
+//                EV << "Output-02: " << rechargeValue << endl;
+//                EV << "Testing--End" << endl;
+                //endSimulation();
