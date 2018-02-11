@@ -1,0 +1,152 @@
+----------------------------------------------------------------------
+
+
+Tcl error: moduleinspector.cc#935: ptr02D875E8 not found
+    while executing
+"error "$tag not found""
+    (procedure "ModuleInspector:getSubmodCoords" line 4)
+    invoked from within
+"ModuleInspector:getSubmodCoords $c $mod2ptr"
+    (procedure "doAnimateGroup" line 42)
+    invoked from within
+"doAnimateGroup $jobgroup($stage)"
+    (procedure "doConcurrentAnimations" line 30)
+    invoked from within
+"doConcurrentAnimations $tkenv(animjobs)"
+    (procedure "performAnimations" line 4)
+    invoked from within
+"performAnimations"
+
+
+Tcl error: moduleinspector.cc#935: ptr02D875E8 not found
+    while executing
+"error "$tag not found""
+    (procedure "ModuleInspector:getSubmodCoords" line 4)
+    invoked from within
+"ModuleInspector:getSubmodCoords $c $mod2ptr"
+    (procedure "doAnimateGroup" line 42)
+    invoked from within
+"doAnimateGroup $jobgroup($stage)"
+    (procedure "doConcurrentAnimations" line 30)
+    invoked from within
+"doConcurrentAnimations $tkenv(animjobs)"
+    (procedure "performAnimations" line 4)
+    invoked from within
+"performAnimations"
+
+
+Tcl error: moduleinspector.cc#935: ptr02D875E8 not found
+    while executing
+"error "$tag not found""
+    (procedure "ModuleInspector:getSubmodCoords" line 4)
+    invoked from within
+"ModuleInspector:getSubmodCoords $c $mod2ptr"
+    (procedure "doAnimateGroup" line 42)
+    invoked from within
+"doAnimateGroup $jobgroup($stage)"
+    (procedure "doConcurrentAnimations" line 30)
+    invoked from within
+"doConcurrentAnimations $tkenv(animjobs)"
+    (procedure "performAnimations" line 4)
+    invoked from within
+"performAnimations"
+
+
+Tcl error: moduleinspector.cc#935: ptr02D875E8 not found
+    while executing
+"error "$tag not found""
+    (procedure "ModuleInspector:getSubmodCoords" line 4)
+    invoked from within
+"ModuleInspector:getSubmodCoords $c $mod2ptr"
+    (procedure "doAnimateGroup" line 42)
+    invoked from within
+"doAnimateGroup $jobgroup($stage)"
+    (procedure "doConcurrentAnimations" line 30)
+    invoked from within
+"doConcurrentAnimations $tkenv(animjobs)"
+    (procedure "performAnimations" line 4)
+    invoked from within
+"performAnimations"
+
+
+Tcl error: moduleinspector.cc#935: ptr02D875E8 not found
+    while executing
+"error "$tag not found""
+    (procedure "ModuleInspector:getSubmodCoords" line 4)
+    invoked from within
+"ModuleInspector:getSubmodCoords $c $mod2ptr"
+    (procedure "doAnimateGroup" line 42)
+    invoked from within
+"doAnimateGroup $jobgroup($stage)"
+    (procedure "doConcurrentAnimations" line 30)
+    invoked from within
+"doConcurrentAnimations $tkenv(animjobs)"
+    (procedure "performAnimations" line 4)
+    invoked from within
+"performAnimations"
+
+
+Tcl error: moduleinspector.cc#935: ptr02D875E8 not found
+    while executing
+"error "$tag not found""
+    (procedure "ModuleInspector:getSubmodCoords" line 4)
+    invoked from within
+"ModuleInspector:getSubmodCoords $c $mod2ptr"
+    (procedure "doAnimateGroup" line 42)
+    invoked from within
+"doAnimateGroup $jobgroup($stage)"
+    (procedure "doConcurrentAnimations" line 30)
+    invoked from within
+"doConcurrentAnimations $tkenv(animjobs)"
+    (procedure "performAnimations" line 4)
+    invoked from within
+"performAnimations"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: moduleinspector.cc#511: bad window path name ""
+    while executing
+"winfo toplevel [focus]"
+    invoked from within
+"if [catch {
+
+       # lower all range indicators below the icons
+       $c lower "range"
+
+       # parse display string. note: we need "1" as last par..."
+    (procedure "ModuleInspector:drawEnclosingModule" line 11)
+    invoked from within
+"ModuleInspector:drawEnclosingModule .network.c ptr02EC2C40 {LEACHC} bgb=netSizeX,netSizeY {} "
+
+
+Tcl error: moduleinspector.cc#87: missing operand at _@_
+in expression "-_@_"
+    (parsing expression "-")
+    invoked from within
+"expr [lindex $bb 2]-[lindex $bb 0]"
+    (procedure "ModuleInspector:adjustWindowSizeAndZoom" line 13)
+    invoked from within
+"ModuleInspector:adjustWindowSizeAndZoom $insp"
+    (procedure "ModuleInspector:onSetObject" line 14)
+    invoked from within
+"ModuleInspector:onSetObject .network"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: genericobjectinspector.cc#82: std::bad_alloc
+    while executing
+"opp_fillinspectorlistbox $lb $ptr 0"
+    invoked from within
+"if [opp_isnull $ptr] {
+        $insp.nb tab $insp.nb.contents -text "Contents (0)"
+    } else {
+        set count [opp_fillinspectorlistbox $lb $ptr 0..."
+    (procedure "GenericObjectInspector:refresh" line 7)
+    invoked from within
+"GenericObjectInspector:refresh .inspector"
+
+

@@ -1,0 +1,9 @@
+Leach
+1. 1st Node die 10 Node die all node die (X) vs Round (Y) - Done
+2. Round (X) vs No of dead nodes (Y) - Done
+3. Round (X) vs No of Alive nodes (Y) - Done
+4. Round (X) vs total energy consumption (Y)
+5. Round (X) vs Total remaining energy (Y)
+6. Round (X) Vs Average delay
+7. Round (X) Vs no packet in Sink
+8. Round (X) Vs no of CH
