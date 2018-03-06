@@ -18,6 +18,8 @@ package PLEACHPckg;
 network PLEACH
 {
     parameters:
+        //string testValue = default(0);
+        string testValue = default("0");
         int roundNumber = default(0);
         double totalRemainingEnergy = default(0);
         double avgRemainingEnergy = default(0);

@@ -1,0 +1,518 @@
+E # 0 t 0 m 1 ce -1 msg -1
+SB v 1029 rid Nodes-50-0-20180303-15:20:07-16076 b 1000
+KF p -1 c "" s ""
+MC id 1 c cModule t PLEACHPckg.PLEACH n PLEACH cm 1
+MS id 1 d bgb=200,200
+MC id 2 c Sink t PLEACHPckg.Sink pid 1 n sink
+GC m 2 g 0 n radioIn o 0
+MS id 2 d ""
+MC id 3 c Node t PLEACHPckg.Node pid 1 n node[0]
+GC m 3 g 0 n radioIn o 0
+MS id 3 d i=misc/node_vs,gold;p=230,140
+MC id 4 c Node t PLEACHPckg.Node pid 1 n node[1]
+GC m 4 g 0 n radioIn o 0
+MS id 4 d i=misc/node_vs,gold;p=230,140
+MC id 5 c Node t PLEACHPckg.Node pid 1 n node[2]
+GC m 5 g 0 n radioIn o 0
+MS id 5 d i=misc/node_vs,gold;p=230,140
+MC id 6 c Node t PLEACHPckg.Node pid 1 n node[3]
+GC m 6 g 0 n radioIn o 0
+MS id 6 d i=misc/node_vs,gold;p=230,140
+MC id 7 c Node t PLEACHPckg.Node pid 1 n node[4]
+GC m 7 g 0 n radioIn o 0
+MS id 7 d i=misc/node_vs,gold;p=230,140
+MC id 8 c Node t PLEACHPckg.Node pid 1 n node[5]
+GC m 8 g 0 n radioIn o 0
+MS id 8 d i=misc/node_vs,gold;p=230,140
+MC id 9 c Node t PLEACHPckg.Node pid 1 n node[6]
+GC m 9 g 0 n radioIn o 0
+MS id 9 d i=misc/node_vs,gold;p=230,140
+MC id 10 c Node t PLEACHPckg.Node pid 1 n node[7]
+GC m 10 g 0 n radioIn o 0
+MS id 10 d i=misc/node_vs,gold;p=230,140
+MC id 11 c Node t PLEACHPckg.Node pid 1 n node[8]
+GC m 11 g 0 n radioIn o 0
+MS id 11 d i=misc/node_vs,gold;p=230,140
+MC id 12 c Node t PLEACHPckg.Node pid 1 n node[9]
+GC m 12 g 0 n radioIn o 0
+MS id 12 d i=misc/node_vs,gold;p=230,140
+MC id 13 c Node t PLEACHPckg.Node pid 1 n node[10]
+GC m 13 g 0 n radioIn o 0
+MS id 13 d i=misc/node_vs,gold;p=230,140
+MC id 14 c Node t PLEACHPckg.Node pid 1 n node[11]
+GC m 14 g 0 n radioIn o 0
+MS id 14 d i=misc/node_vs,gold;p=230,140
+MC id 15 c Node t PLEACHPckg.Node pid 1 n node[12]
+GC m 15 g 0 n radioIn o 0
+MS id 15 d i=misc/node_vs,gold;p=230,140
+MC id 16 c Node t PLEACHPckg.Node pid 1 n node[13]
+GC m 16 g 0 n radioIn o 0
+MS id 16 d i=misc/node_vs,gold;p=230,140
+MC id 17 c Node t PLEACHPckg.Node pid 1 n node[14]
+GC m 17 g 0 n radioIn o 0
+MS id 17 d i=misc/node_vs,gold;p=230,140
+MC id 18 c Node t PLEACHPckg.Node pid 1 n node[15]
+GC m 18 g 0 n radioIn o 0
+MS id 18 d i=misc/node_vs,gold;p=230,140
+MC id 19 c Node t PLEACHPckg.Node pid 1 n node[16]
+GC m 19 g 0 n radioIn o 0
+MS id 19 d i=misc/node_vs,gold;p=230,140
+MC id 20 c Node t PLEACHPckg.Node pid 1 n node[17]
+GC m 20 g 0 n radioIn o 0
+MS id 20 d i=misc/node_vs,gold;p=230,140
+MC id 21 c Node t PLEACHPckg.Node pid 1 n node[18]
+GC m 21 g 0 n radioIn o 0
+MS id 21 d i=misc/node_vs,gold;p=230,140
+MC id 22 c Node t PLEACHPckg.Node pid 1 n node[19]
+GC m 22 g 0 n radioIn o 0
+MS id 22 d i=misc/node_vs,gold;p=230,140
+MC id 23 c Node t PLEACHPckg.Node pid 1 n node[20]
+GC m 23 g 0 n radioIn o 0
+MS id 23 d i=misc/node_vs,gold;p=230,140
+MC id 24 c Node t PLEACHPckg.Node pid 1 n node[21]
+GC m 24 g 0 n radioIn o 0
+MS id 24 d i=misc/node_vs,gold;p=230,140
+MC id 25 c Node t PLEACHPckg.Node pid 1 n node[22]
+GC m 25 g 0 n radioIn o 0
+MS id 25 d i=misc/node_vs,gold;p=230,140
+MC id 26 c Node t PLEACHPckg.Node pid 1 n node[23]
+GC m 26 g 0 n radioIn o 0
+MS id 26 d i=misc/node_vs,gold;p=230,140
+MC id 27 c Node t PLEACHPckg.Node pid 1 n node[24]
+GC m 27 g 0 n radioIn o 0
+MS id 27 d i=misc/node_vs,gold;p=230,140
+MC id 28 c Node t PLEACHPckg.Node pid 1 n node[25]
+GC m 28 g 0 n radioIn o 0
+MS id 28 d i=misc/node_vs,gold;p=230,140
+MC id 29 c Node t PLEACHPckg.Node pid 1 n node[26]
+GC m 29 g 0 n radioIn o 0
+MS id 29 d i=misc/node_vs,gold;p=230,140
+MC id 30 c Node t PLEACHPckg.Node pid 1 n node[27]
+GC m 30 g 0 n radioIn o 0
+MS id 30 d i=misc/node_vs,gold;p=230,140
+MC id 31 c Node t PLEACHPckg.Node pid 1 n node[28]
+GC m 31 g 0 n radioIn o 0
+MS id 31 d i=misc/node_vs,gold;p=230,140
+MC id 32 c Node t PLEACHPckg.Node pid 1 n node[29]
+GC m 32 g 0 n radioIn o 0
+MS id 32 d i=misc/node_vs,gold;p=230,140
+MC id 33 c Node t PLEACHPckg.Node pid 1 n node[30]
+GC m 33 g 0 n radioIn o 0
+MS id 33 d i=misc/node_vs,gold;p=230,140
+MC id 34 c Node t PLEACHPckg.Node pid 1 n node[31]
+GC m 34 g 0 n radioIn o 0
+MS id 34 d i=misc/node_vs,gold;p=230,140
+MC id 35 c Node t PLEACHPckg.Node pid 1 n node[32]
+GC m 35 g 0 n radioIn o 0
+MS id 35 d i=misc/node_vs,gold;p=230,140
+MC id 36 c Node t PLEACHPckg.Node pid 1 n node[33]
+GC m 36 g 0 n radioIn o 0
+MS id 36 d i=misc/node_vs,gold;p=230,140
+MC id 37 c Node t PLEACHPckg.Node pid 1 n node[34]
+GC m 37 g 0 n radioIn o 0
+MS id 37 d i=misc/node_vs,gold;p=230,140
+MC id 38 c Node t PLEACHPckg.Node pid 1 n node[35]
+GC m 38 g 0 n radioIn o 0
+MS id 38 d i=misc/node_vs,gold;p=230,140
+MC id 39 c Node t PLEACHPckg.Node pid 1 n node[36]
+GC m 39 g 0 n radioIn o 0
+MS id 39 d i=misc/node_vs,gold;p=230,140
+MC id 40 c Node t PLEACHPckg.Node pid 1 n node[37]
+GC m 40 g 0 n radioIn o 0
+MS id 40 d i=misc/node_vs,gold;p=230,140
+MC id 41 c Node t PLEACHPckg.Node pid 1 n node[38]
+GC m 41 g 0 n radioIn o 0
+MS id 41 d i=misc/node_vs,gold;p=230,140
+MC id 42 c Node t PLEACHPckg.Node pid 1 n node[39]
+GC m 42 g 0 n radioIn o 0
+MS id 42 d i=misc/node_vs,gold;p=230,140
+MC id 43 c Node t PLEACHPckg.Node pid 1 n node[40]
+GC m 43 g 0 n radioIn o 0
+MS id 43 d i=misc/node_vs,gold;p=230,140
+MC id 44 c Node t PLEACHPckg.Node pid 1 n node[41]
+GC m 44 g 0 n radioIn o 0
+MS id 44 d i=misc/node_vs,gold;p=230,140
+MC id 45 c Node t PLEACHPckg.Node pid 1 n node[42]
+GC m 45 g 0 n radioIn o 0
+MS id 45 d i=misc/node_vs,gold;p=230,140
+MC id 46 c Node t PLEACHPckg.Node pid 1 n node[43]
+GC m 46 g 0 n radioIn o 0
+MS id 46 d i=misc/node_vs,gold;p=230,140
+MC id 47 c Node t PLEACHPckg.Node pid 1 n node[44]
+GC m 47 g 0 n radioIn o 0
+MS id 47 d i=misc/node_vs,gold;p=230,140
+MC id 48 c Node t PLEACHPckg.Node pid 1 n node[45]
+GC m 48 g 0 n radioIn o 0
+MS id 48 d i=misc/node_vs,gold;p=230,140
+MC id 49 c Node t PLEACHPckg.Node pid 1 n node[46]
+GC m 49 g 0 n radioIn o 0
+MS id 49 d i=misc/node_vs,gold;p=230,140
+MC id 50 c Node t PLEACHPckg.Node pid 1 n node[47]
+GC m 50 g 0 n radioIn o 0
+MS id 50 d i=misc/node_vs,gold;p=230,140
+MC id 51 c Node t PLEACHPckg.Node pid 1 n node[48]
+GC m 51 g 0 n radioIn o 0
+MS id 51 d i=misc/node_vs,gold;p=230,140
+MC id 52 c Node t PLEACHPckg.Node pid 1 n node[49]
+GC m 52 g 0 n radioIn o 0
+MS id 52 d i=misc/node_vs,gold;p=230,140
+MB sm 1 tm 2 m initialize(0)
+CM id 0 tid 0 eid 0 etid 0 c cMessage n Wakeup pe -1
+- SinkX: 80
+- SinkY: 20
+MS id 2 d p=80
+MS id 2 d p=80,20
+MS id 2 d i=device/antennatower;p=80,20
+BS id 0 tid 0 eid 0 etid 0 c custMsg n Wakeup pe 0
+ES t 0.5
+ME
+MB sm 1 tm 3 m initialize(0)
+CM id 1 tid 1 eid 1 etid 1 c cMessage n Wakeup pe -1
+MS id 3 d i=misc/node_vs,gold;p=172,140
+MS id 3 d i=misc/node_vs,gold;p=172,47
+BS id 1 tid 1 eid 1 etid 1 c custMsg n Wakeup pe 0
+ES t 1
+ME
+MB sm 1 tm 4 m initialize(0)
+CM id 2 tid 2 eid 2 etid 2 c cMessage n Wakeup pe -1
+MS id 4 d i=misc/node_vs,gold;p=117,140
+MS id 4 d i=misc/node_vs,gold;p=117,192
+BS id 2 tid 2 eid 2 etid 2 c custMsg n Wakeup pe 0
+ES t 0.98
+ME
+MB sm 1 tm 5 m initialize(0)
+CM id 3 tid 3 eid 3 etid 3 c cMessage n Wakeup pe -1
+MS id 5 d i=misc/node_vs,gold;p=67,140
+MS id 5 d i=misc/node_vs,gold;p=67,103
+BS id 3 tid 3 eid 3 etid 3 c custMsg n Wakeup pe 0
+ES t 0.96
+ME
+MB sm 1 tm 6 m initialize(0)
+CM id 4 tid 4 eid 4 etid 4 c cMessage n Wakeup pe -1
+MS id 6 d i=misc/node_vs,gold;p=9,140
+MS id 6 d i=misc/node_vs,gold;p=9,21
+BS id 4 tid 4 eid 4 etid 4 c custMsg n Wakeup pe 0
+ES t 0.94
+ME
+MB sm 1 tm 7 m initialize(0)
+CM id 5 tid 5 eid 5 etid 5 c cMessage n Wakeup pe -1
+MS id 7 d i=misc/node_vs,gold;p=36,140
+MS id 7 d i=misc/node_vs,gold;p=36,87
+BS id 5 tid 5 eid 5 etid 5 c custMsg n Wakeup pe 0
+ES t 0.92
+ME
+MB sm 1 tm 8 m initialize(0)
+CM id 6 tid 6 eid 6 etid 6 c cMessage n Wakeup pe -1
+MS id 8 d i=misc/node_vs,gold;p=70,140
+MS id 8 d i=misc/node_vs,gold;p=70,88
+BS id 6 tid 6 eid 6 etid 6 c custMsg n Wakeup pe 0
+ES t 0.9
+ME
+MB sm 1 tm 9 m initialize(0)
+CM id 7 tid 7 eid 7 etid 7 c cMessage n Wakeup pe -1
+MS id 9 d i=misc/node_vs,gold;p=140,140
+MS id 9 d i=misc/node_vs,gold;p=140,58
+BS id 7 tid 7 eid 7 etid 7 c custMsg n Wakeup pe 0
+ES t 0.88
+ME
+MB sm 1 tm 10 m initialize(0)
+CM id 8 tid 8 eid 8 etid 8 c cMessage n Wakeup pe -1
+MS id 10 d i=misc/node_vs,gold;p=193,140
+MS id 10 d i=misc/node_vs,gold;p=193,39
+BS id 8 tid 8 eid 8 etid 8 c custMsg n Wakeup pe 0
+ES t 0.86
+ME
+MB sm 1 tm 11 m initialize(0)
+CM id 9 tid 9 eid 9 etid 9 c cMessage n Wakeup pe -1
+MS id 11 d i=misc/node_vs,gold;p=87,140
+MS id 11 d i=misc/node_vs,gold;p=87,174
+BS id 9 tid 9 eid 9 etid 9 c custMsg n Wakeup pe 0
+ES t 0.84
+ME
+MB sm 1 tm 12 m initialize(0)
+CM id 10 tid 10 eid 10 etid 10 c cMessage n Wakeup pe -1
+MS id 12 d i=misc/node_vs,gold;p=88,140
+MS id 12 d i=misc/node_vs,gold;p=88,81
+BS id 10 tid 10 eid 10 etid 10 c custMsg n Wakeup pe 0
+ES t 0.82
+ME
+MB sm 1 tm 13 m initialize(0)
+CM id 11 tid 11 eid 11 etid 11 c cMessage n Wakeup pe -1
+MS id 13 d i=misc/node_vs,gold;p=165,140
+MS id 13 d i=misc/node_vs,gold;p=165,25
+BS id 11 tid 11 eid 11 etid 11 c custMsg n Wakeup pe 0
+ES t 0.8
+ME
+MB sm 1 tm 14 m initialize(0)
+CM id 12 tid 12 eid 12 etid 12 c cMessage n Wakeup pe -1
+MS id 14 d i=misc/node_vs,gold;p=77,140
+MS id 14 d i=misc/node_vs,gold;p=77,72
+BS id 12 tid 12 eid 12 etid 12 c custMsg n Wakeup pe 0
+ES t 0.78
+ME
+MB sm 1 tm 15 m initialize(0)
+CM id 13 tid 13 eid 13 etid 13 c cMessage n Wakeup pe -1
+MS id 15 d i=misc/node_vs,gold;p=9,140
+MS id 15 d i=misc/node_vs,gold;p=9,148
+BS id 13 tid 13 eid 13 etid 13 c custMsg n Wakeup pe 0
+ES t 0.76
+ME
+MB sm 1 tm 16 m initialize(0)
+CM id 14 tid 14 eid 14 etid 14 c cMessage n Wakeup pe -1
+MS id 16 d i=misc/node_vs,gold;p=115,140
+MS id 16 d i=misc/node_vs,gold;p=115,79
+BS id 14 tid 14 eid 14 etid 14 c custMsg n Wakeup pe 0
+ES t 0.74
+ME
+MB sm 1 tm 17 m initialize(0)
+CM id 15 tid 15 eid 15 etid 15 c cMessage n Wakeup pe -1
+MS id 17 d i=misc/node_vs,gold;p=175,140
+MS id 17 d i=misc/node_vs,gold;p=175,192
+BS id 15 tid 15 eid 15 etid 15 c custMsg n Wakeup pe 0
+ES t 0.72
+ME
+MB sm 1 tm 18 m initialize(0)
+CM id 16 tid 16 eid 16 etid 16 c cMessage n Wakeup pe -1
+MS id 18 d i=misc/node_vs,gold;p=82,140
+MS id 18 d i=misc/node_vs,gold;p=82,99
+BS id 16 tid 16 eid 16 etid 16 c custMsg n Wakeup pe 0
+ES t 0.7
+ME
+MB sm 1 tm 19 m initialize(0)
+CM id 17 tid 17 eid 17 etid 17 c cMessage n Wakeup pe -1
+MS id 19 d i=misc/node_vs,gold;p=177,140
+MS id 19 d i=misc/node_vs,gold;p=177,29
+BS id 17 tid 17 eid 17 etid 17 c custMsg n Wakeup pe 0
+ES t 0.68
+ME
+MB sm 1 tm 20 m initialize(0)
+CM id 18 tid 18 eid 18 etid 18 c cMessage n Wakeup pe -1
+MS id 20 d i=misc/node_vs,gold;p=147,140
+MS id 20 d i=misc/node_vs,gold;p=147,147
+BS id 18 tid 18 eid 18 etid 18 c custMsg n Wakeup pe 0
+ES t 0.66
+ME
+MB sm 1 tm 21 m initialize(0)
+CM id 19 tid 19 eid 19 etid 19 c cMessage n Wakeup pe -1
+MS id 21 d i=misc/node_vs,gold;p=142,140
+MS id 21 d i=misc/node_vs,gold;p=142,167
+BS id 19 tid 19 eid 19 etid 19 c custMsg n Wakeup pe 0
+ES t 0.64
+ME
+MB sm 1 tm 22 m initialize(0)
+CM id 20 tid 20 eid 20 etid 20 c cMessage n Wakeup pe -1
+MS id 22 d i=misc/node_vs,gold;p=32,140
+MS id 22 d i=misc/node_vs,gold;p=32,193
+BS id 20 tid 20 eid 20 etid 20 c custMsg n Wakeup pe 0
+ES t 0.62
+ME
+MB sm 1 tm 23 m initialize(0)
+CM id 21 tid 21 eid 21 etid 21 c cMessage n Wakeup pe -1
+MS id 23 d i=misc/node_vs,gold;p=9,140
+MS id 23 d i=misc/node_vs,gold;p=9,185
+BS id 21 tid 21 eid 21 etid 21 c custMsg n Wakeup pe 0
+ES t 0.6
+ME
+MB sm 1 tm 24 m initialize(0)
+CM id 22 tid 22 eid 22 etid 22 c cMessage n Wakeup pe -1
+MS id 24 d i=misc/node_vs,gold;p=127,140
+MS id 24 d i=misc/node_vs,gold;p=127,32
+BS id 22 tid 22 eid 22 etid 22 c custMsg n Wakeup pe 0
+ES t 0.58
+ME
+MB sm 1 tm 25 m initialize(0)
+CM id 23 tid 23 eid 23 etid 23 c cMessage n Wakeup pe -1
+MS id 25 d i=misc/node_vs,gold;p=31,140
+MS id 25 d i=misc/node_vs,gold;p=31,151
+BS id 23 tid 23 eid 23 etid 23 c custMsg n Wakeup pe 0
+ES t 0.56
+ME
+MB sm 1 tm 26 m initialize(0)
+CM id 24 tid 24 eid 24 etid 24 c cMessage n Wakeup pe -1
+MS id 26 d i=misc/node_vs,gold;p=163,140
+MS id 26 d i=misc/node_vs,gold;p=163,114
+BS id 24 tid 24 eid 24 etid 24 c custMsg n Wakeup pe 0
+ES t 0.54
+ME
+MB sm 1 tm 27 m initialize(0)
+CM id 25 tid 25 eid 25 etid 25 c cMessage n Wakeup pe -1
+MS id 27 d i=misc/node_vs,gold;p=183,140
+MS id 27 d i=misc/node_vs,gold;p=183,28
+BS id 25 tid 25 eid 25 etid 25 c custMsg n Wakeup pe 0
+ES t 0.52
+ME
+MB sm 1 tm 28 m initialize(0)
+CM id 26 tid 26 eid 26 etid 26 c cMessage n Wakeup pe -1
+MS id 28 d i=misc/node_vs,gold;p=34,140
+MS id 28 d i=misc/node_vs,gold;p=34,128
+BS id 26 tid 26 eid 26 etid 26 c custMsg n Wakeup pe 0
+ES t 0.5
+ME
+MB sm 1 tm 29 m initialize(0)
+CM id 27 tid 27 eid 27 etid 27 c cMessage n Wakeup pe -1
+MS id 29 d i=misc/node_vs,gold;p=128,140
+MS id 29 d i=misc/node_vs,gold;p=128,164
+BS id 27 tid 27 eid 27 etid 27 c custMsg n Wakeup pe 0
+ES t 0.48
+ME
+MB sm 1 tm 30 m initialize(0)
+CM id 28 tid 28 eid 28 etid 28 c cMessage n Wakeup pe -1
+MS id 30 d i=misc/node_vs,gold;p=53,140
+MS id 30 d i=misc/node_vs,gold;p=53,133
+BS id 28 tid 28 eid 28 etid 28 c custMsg n Wakeup pe 0
+ES t 0.46
+ME
+MB sm 1 tm 31 m initialize(0)
+CM id 29 tid 29 eid 29 etid 29 c cMessage n Wakeup pe -1
+MS id 31 d i=misc/node_vs,gold;p=38,140
+MS id 31 d i=misc/node_vs,gold;p=38,79
+BS id 29 tid 29 eid 29 etid 29 c custMsg n Wakeup pe 0
+ES t 0.44
+ME
+MB sm 1 tm 32 m initialize(0)
+CM id 30 tid 30 eid 30 etid 30 c cMessage n Wakeup pe -1
+MS id 32 d i=misc/node_vs,gold;p=132,140
+MS id 32 d i=misc/node_vs,gold;p=132,105
+BS id 30 tid 30 eid 30 etid 30 c custMsg n Wakeup pe 0
+ES t 0.42
+ME
+MB sm 1 tm 33 m initialize(0)
+CM id 31 tid 31 eid 31 etid 31 c cMessage n Wakeup pe -1
+MS id 33 d i=misc/node_vs,gold;p=42,140
+MS id 33 d i=misc/node_vs,gold;p=42,186
+BS id 31 tid 31 eid 31 etid 31 c custMsg n Wakeup pe 0
+ES t 0.4
+ME
+MB sm 1 tm 34 m initialize(0)
+CM id 32 tid 32 eid 32 etid 32 c cMessage n Wakeup pe -1
+MS id 34 d i=misc/node_vs,gold;p=31,140
+MS id 34 d i=misc/node_vs,gold;p=31,120
+BS id 32 tid 32 eid 32 etid 32 c custMsg n Wakeup pe 0
+ES t 0.38
+ME
+MB sm 1 tm 35 m initialize(0)
+CM id 33 tid 33 eid 33 etid 33 c cMessage n Wakeup pe -1
+MS id 35 d i=misc/node_vs,gold;p=65,140
+MS id 35 d i=misc/node_vs,gold;p=65,169
+BS id 33 tid 33 eid 33 etid 33 c custMsg n Wakeup pe 0
+ES t 0.36
+ME
+MB sm 1 tm 36 m initialize(0)
+CM id 34 tid 34 eid 34 etid 34 c cMessage n Wakeup pe -1
+MS id 36 d i=misc/node_vs,gold;p=57,140
+MS id 36 d i=misc/node_vs,gold;p=57,35
+BS id 34 tid 34 eid 34 etid 34 c custMsg n Wakeup pe 0
+ES t 0.34
+ME
+MB sm 1 tm 37 m initialize(0)
+CM id 35 tid 35 eid 35 etid 35 c cMessage n Wakeup pe -1
+MS id 37 d i=misc/node_vs,gold;p=102,140
+MS id 37 d i=misc/node_vs,gold;p=102,119
+BS id 35 tid 35 eid 35 etid 35 c custMsg n Wakeup pe 0
+ES t 0.32
+ME
+MB sm 1 tm 38 m initialize(0)
+CM id 36 tid 36 eid 36 etid 36 c cMessage n Wakeup pe -1
+MS id 38 d i=misc/node_vs,gold;p=11,140
+MS id 38 d i=misc/node_vs,gold;p=11,174
+BS id 36 tid 36 eid 36 etid 36 c custMsg n Wakeup pe 0
+ES t 0.3
+ME
+MB sm 1 tm 39 m initialize(0)
+CM id 37 tid 37 eid 37 etid 37 c cMessage n Wakeup pe -1
+MS id 39 d i=misc/node_vs,gold;p=82,140
+MS id 39 d i=misc/node_vs,gold;p=82,91
+BS id 37 tid 37 eid 37 etid 37 c custMsg n Wakeup pe 0
+ES t 0.28
+ME
+MB sm 1 tm 40 m initialize(0)
+CM id 38 tid 38 eid 38 etid 38 c cMessage n Wakeup pe -1
+MS id 40 d i=misc/node_vs,gold;p=128,140
+MS id 40 d i=misc/node_vs,gold;p=128,142
+BS id 38 tid 38 eid 38 etid 38 c custMsg n Wakeup pe 0
+ES t 0.26
+ME
+MB sm 1 tm 41 m initialize(0)
+CM id 39 tid 39 eid 39 etid 39 c cMessage n Wakeup pe -1
+MS id 41 d i=misc/node_vs,gold;p=99,140
+MS id 41 d i=misc/node_vs,gold;p=99,53
+BS id 39 tid 39 eid 39 etid 39 c custMsg n Wakeup pe 0
+ES t 0.24
+ME
+MB sm 1 tm 42 m initialize(0)
+CM id 40 tid 40 eid 40 etid 40 c cMessage n Wakeup pe -1
+MS id 42 d i=misc/node_vs,gold;p=140,140
+MS id 42 d i=misc/node_vs,gold;p=140,121
+BS id 40 tid 40 eid 40 etid 40 c custMsg n Wakeup pe 0
+ES t 0.22
+ME
+MB sm 1 tm 43 m initialize(0)
+CM id 41 tid 41 eid 41 etid 41 c cMessage n Wakeup pe -1
+MS id 43 d i=misc/node_vs,gold;p=170,140
+MS id 43 d i=misc/node_vs,gold;p=170,84
+BS id 41 tid 41 eid 41 etid 41 c custMsg n Wakeup pe 0
+ES t 0.2
+ME
+MB sm 1 tm 44 m initialize(0)
+CM id 42 tid 42 eid 42 etid 42 c cMessage n Wakeup pe -1
+MS id 44 d i=misc/node_vs,gold;p=68,140
+MS id 44 d i=misc/node_vs,gold;p=68,47
+BS id 42 tid 42 eid 42 etid 42 c custMsg n Wakeup pe 0
+ES t 0.18
+ME
+MB sm 1 tm 45 m initialize(0)
+CM id 43 tid 43 eid 43 etid 43 c cMessage n Wakeup pe -1
+MS id 45 d i=misc/node_vs,gold;p=127,140
+MS id 45 d i=misc/node_vs,gold;p=127,131
+BS id 43 tid 43 eid 43 etid 43 c custMsg n Wakeup pe 0
+ES t 0.16
+ME
+MB sm 1 tm 46 m initialize(0)
+CM id 44 tid 44 eid 44 etid 44 c cMessage n Wakeup pe -1
+MS id 46 d i=misc/node_vs,gold;p=100,140
+MS id 46 d i=misc/node_vs,gold;p=100,180
+BS id 44 tid 44 eid 44 etid 44 c custMsg n Wakeup pe 0
+ES t 0.14
+ME
+MB sm 1 tm 47 m initialize(0)
+CM id 45 tid 45 eid 45 etid 45 c cMessage n Wakeup pe -1
+MS id 47 d i=misc/node_vs,gold;p=78,140
+MS id 47 d i=misc/node_vs,gold;p=78,143
+BS id 45 tid 45 eid 45 etid 45 c custMsg n Wakeup pe 0
+ES t 0.12
+ME
+MB sm 1 tm 48 m initialize(0)
+CM id 46 tid 46 eid 46 etid 46 c cMessage n Wakeup pe -1
+MS id 48 d i=misc/node_vs,gold;p=148,140
+MS id 48 d i=misc/node_vs,gold;p=148,186
+BS id 46 tid 46 eid 46 etid 46 c custMsg n Wakeup pe 0
+ES t 0.1
+ME
+MB sm 1 tm 49 m initialize(0)
+CM id 47 tid 47 eid 47 etid 47 c cMessage n Wakeup pe -1
+MS id 49 d i=misc/node_vs,gold;p=23,140
+MS id 49 d i=misc/node_vs,gold;p=23,141
+BS id 47 tid 47 eid 47 etid 47 c custMsg n Wakeup pe 0
+ES t 0.08
+ME
+MB sm 1 tm 50 m initialize(0)
+CM id 48 tid 48 eid 48 etid 48 c cMessage n Wakeup pe -1
+MS id 50 d i=misc/node_vs,gold;p=117,140
+MS id 50 d i=misc/node_vs,gold;p=117,85
+BS id 48 tid 48 eid 48 etid 48 c custMsg n Wakeup pe 0
+ES t 0.06
+ME
+MB sm 1 tm 51 m initialize(0)
+CM id 49 tid 49 eid 49 etid 49 c cMessage n Wakeup pe -1
+MS id 51 d i=misc/node_vs,gold;p=48,140
+MS id 51 d i=misc/node_vs,gold;p=48,49
+BS id 49 tid 49 eid 49 etid 49 c custMsg n Wakeup pe 0
+ES t 0.04
+ME
+MB sm 1 tm 52 m initialize(0)
+CM id 50 tid 50 eid 50 etid 50 c cMessage n Wakeup pe -1
+MS id 52 d i=misc/node_vs,gold;p=69,140
+MS id 52 d i=misc/node_vs,gold;p=69,169
+- totalDistance: 5453
+- Hello world
+ME

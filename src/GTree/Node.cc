@@ -64,17 +64,9 @@ Node::Node() {
 }
 
 Node::~Node() {
-    // TODO Auto-generated destructor stub
-
-//    dataQueue->clear();
-//    delete dataQueue;
-
 }
 
 void Node::initialize() {
-
-    //EV<<"PI: " <<PI<<endl;
-    //endSimulation();
 
     dataQueue = new cQueue;  //Queue for incoming message
     chDataQueue = new cQueue;
@@ -87,20 +79,11 @@ void Node::initialize() {
     this->netSizeY = getParentModule()->par("netSizeY");
 
     SetCoordinate();
-    //CalculateAvgDistanceToBS();
-    //Caculate average distance to BS
 
-    //dToBS = (double)getParentModule()->par("dToBS");
-
-    //dToBS = 109.06;
-    //(double)getParentModule()->par("dToBS");
-    //55.00;
-    //109.06; //calculated.
     this->K = (sqrt(noOfWirelessNode) / sqrt(2 * PI)) * sqrt(Efs / Emp)
             * ((double) netSizeX / (dToBS * dToBS));
 
-    //EV << "K: " << K << endl;
-    //* sqrt((Efs * netSizeX) / Emp * dToBS * dToBS);
+
     this->R = sqrt((double) (netSizeX * netSizeX) / (PI * K)); //==55.3215 calculated
 
     //Set Initial Cluster head and cluster
@@ -110,11 +93,13 @@ void Node::initialize() {
         //endSimulation();
 
         CalculateNeighborNode();
-        SetEnergyMarker();
-        CalculateWGTV();
+        //SetEnergyMarker();
+        //CalculateWGTV();
         //endSimulation();
+
+        //Must need for following
         ClusterHeadSelection(0);
-        ClusterFormation(0);
+        //ClusterFormation(0);
     }
 
     /***********************************************************************
@@ -379,6 +364,7 @@ void Node::ClusterHeadSelection(int roundNo) {
 
     //Initially reset all node as normal node
     for (int i = 0; i < noOfWirelessNode; i++) {
+
         tempModule = getParentModule()->getSubmodule("node", i);
         tempNode = check_and_cast<Node *>(tempModule);
         tempNode->type = 'N';
@@ -386,14 +372,17 @@ void Node::ClusterHeadSelection(int roundNo) {
         tempNode->CHIndex = 0;
     }
 
+
+
     cModule *tempCurModule;
     Node *tempCurNode;
 
-    cModule *tempNextModule;
-    Node *tempNextNode;
+//    cModule *tempNextModule;
+//    Node *tempNextNode;
 
     cModule *tempNeighborModule;
     Node *tempNeighborNode;
+
 
     //Calculate parent node
 
@@ -406,7 +395,20 @@ void Node::ClusterHeadSelection(int roundNo) {
         int neighborNodeIndex = -1;
         int neighborDistance = 0;
 
+        int test = tempCurNode->neighborNode.size();
+        EV << "Test value" <<test << endl;
+        EV << "Test value" <<test << endl;
+        EV << "Test value" <<test << endl;
+        std::cout<< "Test value" <<test << endl;
+
+        getParentModule()->par("testValue") = test; //Reset cluster head
+                   //endSimulation();
+
         for (int j = 0; j < tempCurNode->neighborNode.size(); j++) {
+
+            EV << "Trying to detect error" << endl;
+            endSimulation();
+
             double neighborNodeTheta = tempCurNode->neighborTheta[j];
             if (neighborNodeTheta > maxTheta) {
                 maxTheta = neighborNodeTheta;
@@ -651,6 +653,8 @@ void Node::ClusterHeadSelection(int roundNo) {
 
 
  */
+
+
 //Calculate node distance from Sink
 int Node::CalculateDistanceToBS(int senderIndex) {
 
@@ -693,41 +697,44 @@ void Node::ClusterFormation(int roundNo) {
         tempModule = getParentModule()->getSubmodule("node", i);
         tempNode = check_and_cast<Node *>(tempModule);
 
+        //Skip loop if it is not normal node and its battery power is less than or equal to zero
+        if (tempNode->type != 'N' && tempNode->batteryPower <= 0)
+            continue;
+
         //if(noOfCluster-1 >= 1)
         int minDistance = 32000;    //infinity
         cModule *tempCHModule;
         Node *tempCHNode;
         int tempDistance = 0;
 
-        if (tempNode->type == 'N' && tempNode->batteryPower > 0) {
-            for (int ch = 0; ch < noOfWirelessNode; ch++) {
-                tempCHModule = getParentModule()->getSubmodule("node", ch);
-                tempCHNode = check_and_cast<Node *>(tempCHModule);
-                if (tempCHNode->type == 'C') {
-                    tempDistance = std::min(minDistance,
-                            CalculateDistance(i, ch));
+        //Identify parent of current node
+        parentModule = getParentModule()->getSubmodule("node", tempNode->parentNodeIndex);
+        parentNode = check_and_cast<Node *>(parentModule);
 
-                    if (tempDistance < minDistance) {
-                        minDistance = tempDistance;
-                        tempNode->CHIndex = ch;
-                        //min_dis_cluster=c;
-                    }
+        if(parentNode->type == 'C')
+        {
+            tempNode->CHIndex = parentNode->getIndex();
+        }
+        else {
+            int treeLevel = 0;
+            while (treeLevel <= 3)    //Consider max tree level is 3
+            {
+                parentModule = getParentModule()->getSubmodule("node",
+                        parentNode->parentNodeIndex);
 
-                } else {
-                    continue;
+                parentNode = check_and_cast<Node *>(parentModule);
+
+                if (parentNode->type == 'C') {
+                    tempNode->CHIndex = parentNode->getIndex();
+                    break;
                 }
+
+                treeLevel++;
             }
+
         }
 
-//        if (i == 39) {
-//            EV<<"Node type: "<<tempNode->type <<endl;
-//            endSimulation();
-//        }
-
-        //skip the rest of the calculation for cluster head
-        if (tempNode->type == 'C') {
-            continue;
-        }
+        minDistance = CalculateDistance(i, tempNode->CHIndex);
 
         if (minDistance > this->Do) {
 
@@ -748,6 +755,7 @@ void Node::ClusterFormation(int roundNo) {
                     + Efs * 4000 * (minDistance * minDistance);
         }
         tempNode->NETX = tempNode->NETX - efactor;
+
     }
 }
 
@@ -1122,15 +1130,12 @@ void Node::CalculateNeighborNode() {
             }
         }
 
-        //Test display
-//        for (int k = 0; k < curNode->neighborTheta.size(); k++) {
-//            EV<<"Neighbor of : " << i << " energy is " << curNode->neighborTheta[k] <<endl;
-//        }
-//        endSimulation();
-
+        EV<<"Hello world"<<endl;
+      EV<<"Neighbor no: " << curNode->neighborNode.size();
+       endSimulation();
     }
-
 }
+
 
 void Node::SetEnergyMarker() {
 

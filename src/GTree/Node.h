@@ -95,6 +95,12 @@ public:
     cModule *calModule;
     Node *calNode;
 
+    cModule *parentModule;
+    Node *parentNode;
+
+    cModule *childModule;
+    Node *childNode;
+
     cModule *calSinkModule;
     Sink *calSinkNode;
 

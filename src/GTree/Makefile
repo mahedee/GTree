@@ -1,12 +1,12 @@
 #
-# OMNeT++/OMNEST Makefile for MLEACH
+# OMNeT++/OMNEST Makefile for GTree
 #
 # This file was generated with the command:
 #  opp_makemake -f --deep -O out
 #
 
 # Name of target to be created (-o option)
-TARGET = MLEACH$(EXE_SUFFIX)
+TARGET = GTree$(EXE_SUFFIX)
 
 # User interface (uncomment one) (-u option)
 USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
@@ -104,7 +104,7 @@ msgheaders: $(MSGFILES:.msg=_m.h)
 clean:
 	$(qecho) Cleaning...
 	$(Q)-rm -rf $O
-	$(Q)-rm -f MLEACH MLEACH.exe libMLEACH.so libMLEACH.a libMLEACH.dll libMLEACH.dylib
+	$(Q)-rm -f GTree GTree.exe libGTree.so libGTree.a libGTree.dll libGTree.dylib
 	$(Q)-rm -f ./*_m.cc ./*_m.h
 	$(Q)-rm -f Doc/*_m.cc Doc/*_m.h
 
