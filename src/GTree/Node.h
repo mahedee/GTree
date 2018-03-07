@@ -63,6 +63,9 @@ public:
     int energyMarker;
     double alpha;
     double efactor;
+    double efactor2;
+
+    double thresholdEnergy;
 
     std::vector<int> neighborNode;
     std::vector<double> neighborNodeDist;

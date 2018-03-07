@@ -60,6 +60,9 @@ Node::Node() {
 
     alpha = 0.1;
     efactor = 0.0;
+    efactor2 = 0.25;
+    this->thresholdEnergy = 0.50;
+
     //efactor =  0.0000580;
 }
 
@@ -99,7 +102,7 @@ void Node::initialize() {
 
         //Must need for following
         ClusterHeadSelection(0);
-        //ClusterFormation(0);
+        ClusterFormation(0);
     }
 
     /***********************************************************************
@@ -159,7 +162,6 @@ void Node::handleMessage(cMessage *msg) {
         getParentModule()->par("roundNumber") = roundNumber;
         getParentModule()->par("lastRoundTime") = lastRoundTime;
         getParentModule()->par("networkStatus") = 2; //Means now nodes will send data to sink.
-        //endSimulation();
     }
 
     //Send data to CH
@@ -171,8 +173,6 @@ void Node::handleMessage(cMessage *msg) {
         if (getIndex() == noOfWirelessNode - 1) {
             //Means all data sent to CH and CH will send data to Sink
             getParentModule()->par("networkStatus") = 3;
-            //EV<<"All data sent to CH in round : "<<roundNumber<<endl;
-            //endSimulation();
         }
     }
 
@@ -185,8 +185,6 @@ void Node::handleMessage(cMessage *msg) {
         if (getIndex() == noOfWirelessNode - 1) {
             //Means all data sent to Sink, ready for setup round
             getParentModule()->par("networkStatus") = 1;
-            //EV<<"All data sent to CH in round : "<<roundNumber<<endl;
-            //endSimulation();
         }
     }
 
@@ -303,13 +301,9 @@ void Node::OptimalClusterFormation() {
         //Set Cluster head for first 5 optimum cluster others are consider as normal node
     }
 
-//    EV<<"clusterHeadPercentage: "<<clusterHeadPercentage <<endl;
-//    endSimulation();
 
     int optimumCluster = (int) noOfWirelessNode * clusterHeadPercentage;
     int optimumClusterCounter = 0;
-    EV << "optimumCluster: " << optimumCluster << endl;
-    //endSimulation();
 
     for (int i = 0; i < noOfWirelessNode; i++) {
         int sortedValue = sortedNode[i];
@@ -391,25 +385,17 @@ void Node::ClusterHeadSelection(int roundNo) {
         tempCurModule = getParentModule()->getSubmodule("node", i);
         tempCurNode = check_and_cast<Node *>(tempCurModule);
 
-        double maxTheta = 0;
+         double maxTheta = 0;
         int neighborNodeIndex = -1;
         int neighborDistance = 0;
 
-        int test = tempCurNode->neighborNode.size();
-        EV << "Test value" <<test << endl;
-        EV << "Test value" <<test << endl;
-        EV << "Test value" <<test << endl;
-        std::cout<< "Test value" <<test << endl;
-
-        getParentModule()->par("testValue") = test; //Reset cluster head
-                   //endSimulation();
-
         for (int j = 0; j < tempCurNode->neighborNode.size(); j++) {
 
-            EV << "Trying to detect error" << endl;
-            endSimulation();
-
             double neighborNodeTheta = tempCurNode->neighborTheta[j];
+
+//            getParentModule()->par("testValueDouble") = neighborNodeTheta;
+//            endSimulation();
+
             if (neighborNodeTheta > maxTheta) {
                 maxTheta = neighborNodeTheta;
                 neighborNodeIndex = tempCurNode->neighborNode[j];
@@ -448,11 +434,18 @@ void Node::ClusterHeadSelection(int roundNo) {
     Node *tempNeigborNode;
     bool isCH;
 
+
+    //getParentModule()->par("testValueDouble") = neighborNodeTheta;
+//    endSimulation();
+
+
     for (int i = 0; i<noOfWirelessNode; i++) {
 
         isCH = false;
         tempCurModule = getParentModule()->getSubmodule("node", i);
         tempCurNode = check_and_cast<Node *>(tempCurModule);
+
+
 
         //Means there is no parent of this node
         if(tempCurNode->parentNodeIndex == -1)
@@ -480,26 +473,10 @@ void Node::ClusterHeadSelection(int roundNo) {
             noOfCH = noOfCH + 1;
             getParentModule()->par("noOfCH") = noOfCH;
 
-            //char buffer[33];
-            //itoa(sortedValue, buffer, 10);
-            //std::string strCH(buffer);
-
-//            if (noOfCH <= 1) {
-//                getParentModule()->par("lstCH") = strCH;
-//            } else {
-//
-//                std::string prevList = getParentModule()->par("lstCH");
-//                getParentModule()->par("lstCH") = prevList + "," + strCH;
-//
-//            }
-
 
             if (tempCurNode->distanceToBS > tempCurNode->Do) {
 
                 EV << "Multipath " << endl;
-                //EV << "Index: " << sortedValue << "distance to bs"
-                 //         << tempCurNode->distanceToBS << endl;
-                //endSimulation();
 
                 tempCurNode->CHETx = (tempCurNode->ETX + tempCurNode->EDA)
                         * (4000)
@@ -533,6 +510,7 @@ void Node::ClusterHeadSelection(int roundNo) {
         }
     }
 
+    //endSimulation();
 }
 
 /*
@@ -694,8 +672,10 @@ void Node::ClusterFormation(int roundNo) {
     //int noOfCluster = getParentModule()->par("noOfCluster");
 
     for (int i = 0; i < noOfWirelessNode; i++) {
+
         tempModule = getParentModule()->getSubmodule("node", i);
         tempNode = check_and_cast<Node *>(tempModule);
+
 
         //Skip loop if it is not normal node and its battery power is less than or equal to zero
         if (tempNode->type != 'N' && tempNode->batteryPower <= 0)
@@ -703,13 +683,23 @@ void Node::ClusterFormation(int roundNo) {
 
         //if(noOfCluster-1 >= 1)
         int minDistance = 32000;    //infinity
-        cModule *tempCHModule;
-        Node *tempCHNode;
-        int tempDistance = 0;
+        //cModule *tempCHModule;
+        //Node *tempCHNode;
+        //int tempDistance = 0;
+
+        EV<<"Parent Node:" << tempNode->parentNodeIndex <<endl;
+
+        //They are already CH. They don't have parent
+        if(tempNode->parentNodeIndex == -1)
+        {
+            return;
+        }
+
 
         //Identify parent of current node
         parentModule = getParentModule()->getSubmodule("node", tempNode->parentNodeIndex);
         parentNode = check_and_cast<Node *>(parentModule);
+
 
         if(parentNode->type == 'C')
         {
@@ -722,7 +712,10 @@ void Node::ClusterFormation(int roundNo) {
                 parentModule = getParentModule()->getSubmodule("node",
                         parentNode->parentNodeIndex);
 
+
+
                 parentNode = check_and_cast<Node *>(parentModule);
+
 
                 if (parentNode->type == 'C') {
                     tempNode->CHIndex = parentNode->getIndex();
@@ -738,9 +731,6 @@ void Node::ClusterFormation(int roundNo) {
 
         if (minDistance > this->Do) {
 
-            //tempCHNode->type
-            EV << "CH of Current Node: " << tempNode->CHIndex << endl;
-            EV << "Node: " << i << "distance to CH: " << minDistance << endl;
             EV << "Node in Multipath " << endl;
             //endSimulation();
 
@@ -748,15 +738,20 @@ void Node::ClusterFormation(int roundNo) {
                     + Emp * 4000
                             * (minDistance * minDistance * minDistance
                                     * minDistance);
+
+            tempNode->NETX = tempNode->NETX * efactor2;
         }
 
         if (minDistance <= Do) {
             tempNode->NETX = ETX * (4000)
                     + Efs * 4000 * (minDistance * minDistance);
         }
+
         tempNode->NETX = tempNode->NETX - efactor;
 
     }
+
+    //endSimulation();
 }
 
 custMsg* Node::CreateCustMsg(const char *name) {
@@ -1017,15 +1012,34 @@ void Node::WriteNetworkEnergyHistory(int roundNumber) {
         calNode = check_and_cast<Node *>(calModule);
         netRemainingEnergy = netRemainingEnergy + calNode->batteryPower;
 
-        //EV << "Battery power: " << calNode->batteryPower << endl;
-        //EV << "netRemainingEnergy: " << netRemainingEnergy << endl;
-        //EV<<"netRemainingEnergy: " <<netRemainingEnergy <<endl;
+    }
 
+
+    if(netRemainingEnergy <= 0.0)
+    {
+        endSimulation();
+    }
+
+    if(netRemainingEnergy <= thresholdEnergy)
+    {
+        netRemainingEnergy = 0.0;
+        getParentModule()->par("allNodeDieRound") = roundNumber;
+
+        for (int i = 0; i < noOfWirelessNode; i++) {
+            calModule = getParentModule()->getSubmodule("node", i);
+            calNode = check_and_cast<Node *>(calModule);
+            calNode->batteryPower = 0;
+
+        }
+
+        //endSimulation();
     }
 
     getParentModule()->par("totalRemainingEnergy") = netRemainingEnergy;
     getParentModule()->par("avgRemainingEnergy") = netRemainingEnergy
             / (double) noOfWirelessNode;
+
+
 
     netConsumptionEnergy = netInitialEnergy - netRemainingEnergy;
 
@@ -1128,12 +1142,17 @@ void Node::CalculateNeighborNode() {
 
                 curNode->neighborTheta.push_back(theta);
             }
+
+
+//          EV<<"Hello world"<<endl;
+//          EV<<"Neighbor no: " << curNode->neighborNode.size();
+
         }
 
-        EV<<"Hello world"<<endl;
-      EV<<"Neighbor no: " << curNode->neighborNode.size();
-       endSimulation();
     }
+
+
+   //endSimulation();
 }
 
 

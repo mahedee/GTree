@@ -20,6 +20,9 @@ network PLEACH
     parameters:
         //string testValue = default(0);
         string testValue = default("0");
+        int testValueInt = default(0);
+        int testValueDouble = default(0);
+        
         int roundNumber = default(0);
         double totalRemainingEnergy = default(0);
         double avgRemainingEnergy = default(0);
@@ -50,7 +53,6 @@ network PLEACH
 
     submodules:
         sink: Sink;
-
         node[noOfWirelessNode]: Node {
             @display("i=misc/node_vs,gold;p=230,140");
         }

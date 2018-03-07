@@ -1,1 +1,1 @@
--g -Wall   -I/usr/include -fno-stack-protector -DXMLPARSER=libxml -DWITH_PARSIM -DWITH_NETBUILDER  -I. -IDoc -Ic:/omnetpp-4.5-src-windows/omnetpp-4.5/include
+-g -Wall   -I/usr/include -fno-stack-protector -DXMLPARSER=libxml -DWITH_PARSIM -DWITH_NETBUILDER  -I. -IDoc -Iresults -Ic:/omnetpp-4.5/include
